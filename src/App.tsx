@@ -8,8 +8,8 @@ function App() {
     generate()
   },[]);
 
-  const [quote, setQuote] = React.useState('');
-  const [author, setAuthor] = React.useState('');
+  const [quote, setQuote] = React.useState('Quote');
+  const [author, setAuthor] = React.useState('Author');
 
   async function generate(){
     const response = await fetch('https://type.fit/api/quotes');
