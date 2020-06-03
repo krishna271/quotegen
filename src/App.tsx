@@ -12,7 +12,7 @@ function App() {
   const [author, setAuthor] = React.useState('Author');
 
   async function generate(){
-    const response = await fetch('https://type.fit/api/quotes');
+    const response = await fetch('https://cors-anywhere.herokuapp.com/https://type.fit/api/quotes');
     const data = await response.json();
     setQuote(data[Math.floor(Math.random()*(data.length-1))].text);
     setAuthor(data[Math.floor(Math.random()*(data.length-1))].author);
